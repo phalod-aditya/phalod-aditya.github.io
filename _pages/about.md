@@ -6,7 +6,7 @@ redirect_from:
   - /about/
 ---
 
-I’m Aditya Phalod, an ML Engineer and independent researcher.
+I’m Aditya Phalod, a machine learning engineer and independent researcher based in Canada.
 
 My current work focuses on LLM reliability, especially confidence estimation, self-verification, and selective prediction. I’m interested in building language models that know when to trust their own answers — and when not to.
 
