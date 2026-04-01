@@ -1,18 +1,44 @@
-# Authors
-
-Name Name:
-  name        : "Name Name"
-  uri         : "https://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+author:
+  avatar           : ""
+  name             : "Aditya Phalod"
+  pronouns         :
+  bio              : "ML Engineer and independent researcher focused on LLM reliability, confidence estimation, and selective prediction."
+  location         : "Canada"
+  employer         :
+  uri              :
+  email            : "aphalod@student.ubc.ca"
+  googlescholar    :
+  bluesky          :
+  codepen          :
+  discord          :
+  dribbble         :
+  facebook         :
+  flickr           :
+  github           : "phalod-aditya"
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         : "Aditya Phalod"
+  mastodon         :
+  medium           :
+  soundcloud       :
+  telegram         :
+  tumblr           :
+  twitter          :
+  vine             :
+  weibo            :
+  wikipedia        :
+  xing             :
+  youtube          :
+  zhihu            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:aphalod@student.ubc.ca"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/phalod-aditya"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/aditya-phalod-02a84919a/"
