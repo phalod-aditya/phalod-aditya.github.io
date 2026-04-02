@@ -1,0 +1,2 @@
+Replace this file with your real resume PDF and update the link in index.html if needed.
+Suggested filename: resume.pdf
