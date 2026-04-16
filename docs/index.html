@@ -16,22 +16,23 @@
         <div class="brand">
           <div class="eyebrow">Portfolio</div>
           <h1>Aditya Phalod</h1>
+          <p class="brand-subtitle">
+            ML Engineer and independent researcher working on reliable language systems.
+          </p>
         </div>
 
         <nav class="nav">
-          <a href="#about">about</a>
-          <a href="#research">research</a>
-          <a href="#work">projects</a>
-          <a href="#experience">work experience</a>
-          <a href="#contact">contact</a>
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main class="layout">
         <aside class="sidebar">
-          <div class="photo-card">
-            <img src="./images/profile-pic.jpg" alt="Profile photo" class="profile-image" />
-          </div>
+          <img src="./images/profile-pic.jpg" alt="Profile photo" class="profile-image" />
 
           <div class="sidebar-meta">
             <div>ML Engineer</div>
@@ -40,35 +41,17 @@
           </div>
 
           <div class="sidebar-links">
-            <a href="https://github.com/phalod-aditya" target="_blank" rel="noreferrer">
-              <span class="icon">◎</span>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/aditya-phalod-02a84919a/" target="_blank" rel="noreferrer">
-              <span class="icon">in</span>
-              <span>LinkedIn</span>
-            </a>
-            <a href="#experience">
-              <span class="icon">↧</span>
-              <span>Work Experience</span>
-            </a>
-            <a href="mailto:aphalod@student.ubc.ca">
-              <span class="icon">✉</span>
-              <span>UBC Email</span>
-            </a>
-            <a href="mailto:adityaphalod@gmail.com">
-              <span class="icon">✉</span>
-              <span>Personal Email</span>
-            </a>
+            <a href="https://github.com/phalod-aditya" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/aditya-phalod-02a84919a/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:aphalod@student.ubc.ca">UBC Email</a>
+            <a href="mailto:adityaphalod@gmail.com">Personal Email</a>
           </div>
         </aside>
 
         <section class="content">
           <section id="about" class="section">
-            <div class="section-label">About</div>
-            <div class="section-heading">
-              <h2>Research-minded ML engineer focused on reliable systems</h2>
-            </div>
+            <div class="section-kicker">About</div>
+            <h2 class="section-title">Research-minded ML engineer focused on reliable systems</h2>
             <div class="copy">
               <p>
                 I work on LLM reliability, confidence estimation, and selective
@@ -86,10 +69,8 @@
           </section>
 
           <section id="research" class="section">
-            <div class="section-label">Research</div>
-            <div class="section-heading">
-              <h2>Interests and technical themes</h2>
-            </div>
+            <div class="section-kicker">Research</div>
+            <h2 class="section-title">Interests and technical themes</h2>
             <div class="tag-list">
               <span>LLM reliability</span>
               <span>confidence estimation</span>
@@ -100,94 +81,72 @@
             </div>
           </section>
 
-          <section id="work" class="section">
-            <div class="section-label">Projects</div>
-            <div class="section-heading">
-              <h2>Research and selected work</h2>
-            </div>
+          <section id="projects" class="section">
+            <div class="section-kicker">Projects</div>
+            <h2 class="section-title">Selected work</h2>
 
-            <div class="cards">
-              <article class="card">
-                <div class="card-meta">
-                  Independent research · LLM reliability · selective prediction
+            <article class="project-item">
+              <div class="project-meta">
+                Independent research · LLM reliability · selective prediction
+              </div>
+              <h3>When Should a Language Model Trust Itself?</h3>
+              <p>
+                An empirical study of same-model self-verification as a
+                confidence signal across reasoning and truthfulness benchmarks.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/phalod-aditya/slm-confidence-signals/blob/main/paper.pdf">Paper</a>
+                <a href="https://github.com/phalod-aditya/slm-confidence-signals">Code</a>
+              </div>
+            </article>
+          </section>
+
+          <section id="experience" class="section experience-section">
+            <div class="section-kicker">Experience</div>
+            <h2 class="section-title">Work experience</h2>
+
+            <div class="experience-list">
+              <article class="experience-item">
+                <div class="experience-row">
+                  <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Haptiq</span></h3>
+                  <div class="date">Oct 2025 — Present</div>
                 </div>
-                <h3>When Should a Language Model Trust Itself?</h3>
-                <p>
-                  An empirical study of same-model self-verification as a
-                  confidence signal across reasoning and truthfulness benchmarks.
-                </p>
-                <div class="card-links">
-                  <a href="https://github.com/phalod-aditya/slm-confidence-signals/blob/main/paper.pdf">Paper ↗</a>
-                  <a href="https://github.com/phalod-aditya/slm-confidence-signals">Code ↗</a>
+                <div class="location">Toronto, ON, Canada</div>
+              </article>
+
+              <article class="experience-item">
+                <div class="experience-row">
+                  <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Scoop Robotix</span></h3>
+                  <div class="date">Sept 2023 — Oct 2025</div>
                 </div>
+                <div class="location">British Columbia, Canada</div>
+              </article>
+
+              <article class="experience-item">
+                <div class="experience-row">
+                  <h3><span class="role">Machine Learning Engineering Intern</span>, <span class="company">Gainfront</span></h3>
+                  <div class="date">May 2023 — Sept 2023</div>
+                </div>
+                <div class="location">California, USA</div>
+              </article>
+
+              <article class="experience-item">
+                <div class="experience-row">
+                  <h3><span class="role">Data Analytics Intern</span>, <span class="company">Koenig &amp; Bauer AG</span></h3>
+                  <div class="date">May 2022 — Sept 2022</div>
+                </div>
+                <div class="location">Bayern, Germany</div>
               </article>
             </div>
           </section>
 
-          <section id="experience" class="section experience-section">
-            <div class="section-label">Work Experience</div>
-            <div class="section-heading">
-              <h2>Professional experience</h2>
-            </div>
-
-            <div class="experience-shell">
-              <div class="experience-timeline">
-                <article class="experience-item">
-                  <div class="experience-marker"></div>
-                  <div class="experience-body">
-                    <div class="experience-topline">
-                      <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Haptiq</span></h3>
-                      <div class="experience-date">Oct 2025 — Present</div>
-                    </div>
-                    <p class="experience-location">Toronto, ON, Canada</p>
-                  </div>
-                </article>
-
-                <article class="experience-item">
-                  <div class="experience-marker"></div>
-                  <div class="experience-body">
-                    <div class="experience-topline">
-                      <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Scoop Robotix</span></h3>
-                      <div class="experience-date">Sept 2023 — Oct 2025</div>
-                    </div>
-                    <p class="experience-location">British Columbia, Canada</p>
-                  </div>
-                </article>
-
-                <article class="experience-item">
-                  <div class="experience-marker"></div>
-                  <div class="experience-body">
-                    <div class="experience-topline">
-                      <h3><span class="role">Machine Learning Engineering Intern</span>, <span class="company">Gainfront</span></h3>
-                      <div class="experience-date">May 2023 — Sept 2023</div>
-                    </div>
-                    <p class="experience-location">California, USA</p>
-                  </div>
-                </article>
-
-                <article class="experience-item">
-                  <div class="experience-marker"></div>
-                  <div class="experience-body">
-                    <div class="experience-topline">
-                      <h3><span class="role">Data Analytics Intern</span>, <span class="company">Koenig &amp; Bauer AG</span></h3>
-                      <div class="experience-date">May 2022 — Sept 2022</div>
-                    </div>
-                    <p class="experience-location">Bayern, Germany</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-
           <section id="contact" class="section section-end">
-            <div class="section-label">Contact</div>
-            <div class="section-heading">
-              <h2>Let’s connect</h2>
-            </div>
+            <div class="section-kicker">Contact</div>
+            <h2 class="section-title">Let’s connect</h2>
             <p class="contact-copy">
-              Best way to reach me is by email. I’m always open to
-              conversations around ML systems, reliability, research
-              collaboration, and thoughtful product work.
+              Best way to reach me is by email. I’m always open to conversations
+              around ML systems, reliability, research collaboration, and
+              thoughtful product work.
             </p>
             <a class="contact-link" href="mailto:adityaphalod@gmail.com">adityaphalod@gmail.com</a>
           </section>
