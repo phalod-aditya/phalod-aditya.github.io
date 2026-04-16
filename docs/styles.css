@@ -142,11 +142,11 @@ img {
 
 .header-photo {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 1px solid var(--line);
   filter: grayscale(8%);
 }
