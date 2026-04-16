@@ -126,7 +126,7 @@ img {
 .header-photo {
   width: 148px;
   height: 148px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
   border-radius: var(--radius);
   border: 1px solid var(--line);
