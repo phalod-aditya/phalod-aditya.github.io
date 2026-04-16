@@ -1,11 +1,12 @@
 :root {
   --bg: #f6f6f4;
   --panel: #fbfbfa;
+  --panel-strong: #f2f2ee;
   --text: #161616;
-  --muted: #6f6f6a;
-  --line: #d9d9d3;
-  --line-strong: #c9c9c2;
-  --accent: #202020;
+  --muted: #6b6b66;
+  --line: #d8d8d1;
+  --line-strong: #c8c8c0;
+  --accent: #111111;
   --max-width: 1320px;
   --radius: 28px;
   --shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
@@ -42,7 +43,7 @@ img {
 .site {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 28px 24px 48px;
+  padding: 28px 24px 56px;
 }
 
 .topbar {
@@ -50,7 +51,7 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .brand h1 {
@@ -92,7 +93,7 @@ img {
 .layout {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
-  gap: 36px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -150,7 +151,7 @@ img {
 }
 
 .section {
-  margin-bottom: 34px;
+  margin-bottom: 52px;
 }
 
 .section-end {
@@ -158,7 +159,7 @@ img {
 }
 
 .section-label {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   letter-spacing: 0.18em;
@@ -166,20 +167,26 @@ img {
   color: var(--muted);
 }
 
+.section-heading {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
 .copy p,
 .contact-copy {
   margin: 0 0 14px;
   max-width: 760px;
   font-size: 21px;
-  line-height: 1.6;
-}
-
-h2 {
-  margin: 0 0 18px;
-  font-size: 34px;
-  line-height: 1.1;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  line-height: 1.65;
 }
 
 .tag-list {
@@ -206,7 +213,7 @@ h2 {
 }
 
 .card {
-  padding: 24px 24px 22px;
+  padding: 26px 26px 24px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -254,99 +261,106 @@ h2 {
   color: var(--text);
 }
 
-.timeline-card {
-  background: var(--panel);
+.experience-section {
+  margin-top: 6px;
+}
+
+.experience-shell {
+  position: relative;
+  background: linear-gradient(to bottom, var(--panel), var(--panel-strong));
   border: 1px solid var(--line);
-  border-radius: 36px;
-  padding: 20px 28px;
+  border-radius: 32px;
+  padding: 14px 26px;
   box-shadow: var(--shadow);
 }
 
-.timeline {
+.experience-timeline {
   position: relative;
 }
 
-.timeline::before {
+.experience-timeline::before {
   content: "";
   position: absolute;
-  left: 11px;
-  top: 10px;
-  bottom: 10px;
+  left: 10px;
+  top: 14px;
+  bottom: 14px;
   width: 1px;
   background: var(--line-strong);
 }
 
-.timeline-item {
+.experience-item {
   position: relative;
   display: grid;
-  grid-template-columns: 28px 1fr;
+  grid-template-columns: 26px 1fr;
   gap: 18px;
-  padding: 16px 0 18px;
+  padding: 18px 0;
 }
 
-.timeline-item:not(:last-child) {
-  border-bottom: 1px solid rgba(201, 201, 194, 0.45);
+.experience-item:not(:last-child) {
+  border-bottom: 1px solid rgba(200, 200, 192, 0.55);
 }
 
-.timeline-marker {
+.experience-marker {
   position: relative;
-  width: 22px;
-  height: 22px;
-  margin-top: 2px;
-}
-
-.timeline-marker::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 1px;
   width: 20px;
   height: 20px;
-  border-radius: 999px;
-  background: var(--panel);
-  border: 1.5px solid var(--text);
+  margin-top: 6px;
 }
 
-.timeline-body {
+.experience-marker::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1.5px solid var(--accent);
+}
+
+.experience-body {
   min-width: 0;
 }
 
-.timeline-top {
+.experience-topline {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   margin-bottom: 4px;
 }
 
-.timeline-company {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.timeline-date {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.timeline-body h3 {
-  margin: 0 0 4px;
-  font-size: 30px;
-  line-height: 1.15;
+.experience-topline h3 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.18;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
-.timeline-location {
+.experience-topline .role {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.experience-topline .company {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.experience-date {
+  flex-shrink: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.experience-location {
   margin: 0;
-  font-size: 19px;
-  line-height: 1.45;
-  color: #3f3f3b;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 .contact-link {
@@ -376,7 +390,7 @@ h2 {
 
 @media (max-width: 720px) {
   .site {
-    padding: 20px 16px 36px;
+    padding: 20px 16px 40px;
   }
 
   .topbar {
@@ -389,38 +403,59 @@ h2 {
     font-size: 30px;
   }
 
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
   .copy p,
   .contact-copy {
     font-size: 18px;
   }
 
-  h2 {
-    font-size: 30px;
-  }
-
-  .card h3,
-  .timeline-body h3 {
+  .card h3 {
     font-size: 24px;
   }
 
-  .card p,
-  .timeline-location {
+  .card p {
     font-size: 17px;
   }
 
-  .timeline-card {
-    padding: 14px 18px;
+  .experience-shell {
+    padding: 10px 16px;
     border-radius: 24px;
   }
 
-  .timeline-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+  .experience-item {
+    grid-template-columns: 22px 1fr;
+    gap: 14px;
+    padding: 16px 0;
   }
 
-  .timeline-date {
+  .experience-timeline::before {
+    left: 8px;
+  }
+
+  .experience-topline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .experience-topline h3 {
+    font-size: 22px;
+  }
+
+  .experience-date {
     white-space: normal;
+    font-size: 12px;
+  }
+
+  .experience-location {
+    font-size: 16px;
   }
 
   .contact-link {
