@@ -11,27 +11,27 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="site">
+    <div class="site-shell">
       <header class="topbar">
-        <div class="brand">
+        <div class="brand-block">
           <div class="eyebrow">Portfolio</div>
           <h1>Aditya Phalod</h1>
           <p class="brand-subtitle">
-            ML Engineer and independent researcher working on reliable language systems.
+            ML Engineer and independent researcher focused on reliable language systems.
           </p>
         </div>
 
         <nav class="nav">
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#research">Research</a>
           <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main class="layout">
-        <aside class="sidebar">
+        <aside class="sidebar-card">
           <img src="./images/profile-pic.jpg" alt="Profile photo" class="profile-image" />
 
           <div class="sidebar-meta">
@@ -49,106 +49,143 @@
         </aside>
 
         <section class="content">
-          <section id="about" class="section">
-            <div class="section-kicker">About</div>
-            <h2 class="section-title">Research-minded ML engineer focused on reliable systems</h2>
-            <div class="copy">
-              <p>
-                I work on LLM reliability, confidence estimation, and selective
-                prediction. I’m especially interested in when language models
-                should trust their own answers, when they should abstain, and how
-                to evaluate those decisions in a way that actually matters in
-                real systems.
-              </p>
-              <p>
-                My work sits between research and applied ML engineering: I like
-                building systems, but I care most when they are measurable,
-                grounded, and robust.
-              </p>
+          <section id="about" class="section-card hero-card">
+            <div class="section-head">
+              <div class="section-kicker">About</div>
+              <h2 class="section-title">Research-minded ML engineer building systems that can be trusted</h2>
             </div>
-          </section>
 
-          <section id="research" class="section">
-            <div class="section-kicker">Research</div>
-            <h2 class="section-title">Interests and technical themes</h2>
-            <div class="tag-list">
-              <span>LLM reliability</span>
-              <span>confidence estimation</span>
-              <span>self-verification</span>
-              <span>selective prediction</span>
-              <span>evaluation and observability</span>
-              <span>research-driven ML systems</span>
-            </div>
-          </section>
-
-          <section id="projects" class="section">
-            <div class="section-kicker">Projects</div>
-            <h2 class="section-title">Selected work</h2>
-
-            <article class="project-item">
-              <div class="project-meta">
-                Independent research · LLM reliability · selective prediction
+            <div class="section-body">
+              <div class="body-copy">
+                <p>
+                  I work on LLM reliability, confidence estimation, and selective prediction.
+                  I’m especially interested in when language models should trust their own
+                  answers, when they should abstain, and how to evaluate those decisions in
+                  a way that matters in real systems.
+                </p>
+                <p>
+                  My work sits between research and applied ML engineering: I like building
+                  systems, but I care most when they are measurable, grounded, and robust.
+                </p>
               </div>
-              <h3>When Should a Language Model Trust Itself?</h3>
-              <p>
-                An empirical study of same-model self-verification as a
-                confidence signal across reasoning and truthfulness benchmarks.
-              </p>
-              <div class="project-links">
-                <a href="https://github.com/phalod-aditya/slm-confidence-signals/blob/main/paper.pdf">Paper</a>
-                <a href="https://github.com/phalod-aditya/slm-confidence-signals">Code</a>
+
+              <div class="about-highlights">
+                <div class="mini-card">
+                  <div class="mini-label">Focus</div>
+                  <div class="mini-text">Reliable LLM systems</div>
+                </div>
+                <div class="mini-card">
+                  <div class="mini-label">Core lens</div>
+                  <div class="mini-text">Evaluation, confidence, observability</div>
+                </div>
+                <div class="mini-card">
+                  <div class="mini-label">Mode</div>
+                  <div class="mini-text">Research × applied engineering</div>
+                </div>
               </div>
-            </article>
+            </div>
           </section>
 
-          <section id="experience" class="section experience-section">
-            <div class="section-kicker">Experience</div>
-            <h2 class="section-title">Work experience</h2>
+          <section id="experience" class="section-card">
+            <div class="section-head">
+              <div class="section-kicker">Experience</div>
+              <h2 class="section-title">Work experience</h2>
+            </div>
 
-            <div class="experience-list">
-              <article class="experience-item">
-                <div class="experience-row">
-                  <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Haptiq</span></h3>
-                  <div class="date">Oct 2025 — Present</div>
-                </div>
-                <div class="location">Toronto, ON, Canada</div>
-              </article>
+            <div class="section-body">
+              <div class="experience-list">
+                <article class="experience-card">
+                  <div class="experience-top">
+                    <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Haptiq</span></h3>
+                    <div class="date">Oct 2025 — Present</div>
+                  </div>
+                  <div class="location">Toronto, ON, Canada</div>
+                </article>
 
-              <article class="experience-item">
-                <div class="experience-row">
-                  <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Scoop Robotix</span></h3>
-                  <div class="date">Sept 2023 — Oct 2025</div>
-                </div>
-                <div class="location">British Columbia, Canada</div>
-              </article>
+                <article class="experience-card">
+                  <div class="experience-top">
+                    <h3><span class="role">Machine Learning Engineer</span>, <span class="company">Scoop Robotix</span></h3>
+                    <div class="date">Sept 2023 — Oct 2025</div>
+                  </div>
+                  <div class="location">British Columbia, Canada</div>
+                </article>
 
-              <article class="experience-item">
-                <div class="experience-row">
-                  <h3><span class="role">Machine Learning Engineering Intern</span>, <span class="company">Gainfront</span></h3>
-                  <div class="date">May 2023 — Sept 2023</div>
-                </div>
-                <div class="location">California, USA</div>
-              </article>
+                <article class="experience-card">
+                  <div class="experience-top">
+                    <h3><span class="role">Machine Learning Engineering Intern</span>, <span class="company">Gainfront</span></h3>
+                    <div class="date">May 2023 — Sept 2023</div>
+                  </div>
+                  <div class="location">California, USA</div>
+                </article>
 
-              <article class="experience-item">
-                <div class="experience-row">
-                  <h3><span class="role">Data Analytics Intern</span>, <span class="company">Koenig &amp; Bauer AG</span></h3>
-                  <div class="date">May 2022 — Sept 2022</div>
+                <article class="experience-card">
+                  <div class="experience-top">
+                    <h3><span class="role">Data Analytics Intern</span>, <span class="company">Koenig &amp; Bauer AG</span></h3>
+                    <div class="date">May 2022 — Sept 2022</div>
+                  </div>
+                  <div class="location">Bayern, Germany</div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="research" class="section-card">
+            <div class="section-head">
+              <div class="section-kicker">Research</div>
+              <h2 class="section-title">Interests and technical themes</h2>
+            </div>
+
+            <div class="section-body">
+              <div class="tag-grid">
+                <span>LLM reliability</span>
+                <span>Confidence estimation</span>
+                <span>Self-verification</span>
+                <span>Selective prediction</span>
+                <span>Evaluation</span>
+                <span>Observability</span>
+                <span>Risk–coverage</span>
+                <span>Research-driven ML systems</span>
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" class="section-card">
+            <div class="section-head">
+              <div class="section-kicker">Projects</div>
+              <h2 class="section-title">Selected work</h2>
+            </div>
+
+            <div class="section-body">
+              <article class="project-card">
+                <div class="project-meta">
+                  Independent research · LLM reliability · selective prediction
                 </div>
-                <div class="location">Bayern, Germany</div>
+                <h3>When Should a Language Model Trust Itself?</h3>
+                <p>
+                  An empirical study of same-model self-verification as a confidence signal
+                  across reasoning and truthfulness benchmarks.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/phalod-aditya/slm-confidence-signals/blob/main/paper.pdf">Paper</a>
+                  <a href="https://github.com/phalod-aditya/slm-confidence-signals">Code</a>
+                </div>
               </article>
             </div>
           </section>
 
-          <section id="contact" class="section section-end">
-            <div class="section-kicker">Contact</div>
-            <h2 class="section-title">Let’s connect</h2>
-            <p class="contact-copy">
-              Best way to reach me is by email. I’m always open to conversations
-              around ML systems, reliability, research collaboration, and
-              thoughtful product work.
-            </p>
-            <a class="contact-link" href="mailto:adityaphalod@gmail.com">adityaphalod@gmail.com</a>
+          <section id="contact" class="section-card section-end">
+            <div class="section-head">
+              <div class="section-kicker">Contact</div>
+              <h2 class="section-title">Let’s connect</h2>
+            </div>
+
+            <div class="section-body">
+              <p class="contact-copy">
+                Best way to reach me is by email. I’m always open to conversations around
+                ML systems, reliability, research collaboration, and thoughtful product work.
+              </p>
+              <a class="contact-link" href="mailto:adityaphalod@gmail.com">adityaphalod@gmail.com</a>
+            </div>
           </section>
         </section>
       </main>
