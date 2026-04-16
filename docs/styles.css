@@ -1,14 +1,15 @@
 :root {
-  --bg: #f7f7f4;
+  --bg: #f9f9f7;
   --panel: #ffffff;
-  --text: #171717;
-  --muted: #66665f;
-  --line: #ddddd6;
-  --line-soft: #e9e8e2;
-  --accent: #111111;
+  --text: #1a1a18;
+  --muted: #6b6b63;
+  --subtle: #9a9a91;
+  --line: #e2e2da;
+  --line-soft: #eeede8;
+  --link: #1a4f8a;
 
-  --max-width: 960px;
-  --radius: 16px;
+  --max-width: 780px;
+  --radius: 6px;
 }
 
 * {
@@ -23,15 +24,21 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1.65;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 a {
-  color: inherit;
+  color: var(--link);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 img {
@@ -39,22 +46,26 @@ img {
   max-width: 100%;
 }
 
+/* ── Page shell ── */
+
 .page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 40px 24px 64px;
+  padding: 56px 28px 80px;
 }
 
+/* ── Header ── */
+
 .site-header {
-  margin-bottom: 44px;
+  margin-bottom: 52px;
 }
 
 .header-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 28px;
-  align-items: center;
-  margin-bottom: 22px;
+  grid-template-columns: minmax(0, 1fr) 148px;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .header-copy {
@@ -62,100 +73,123 @@ img {
 }
 
 .site-header h1 {
-  margin: 0 0 10px;
-  font-size: 46px;
-  line-height: 1.02;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  margin: 0 0 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
 .subhead {
-  margin: 0 0 12px;
-  font-size: 18px;
+  margin: 0 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
   color: var(--muted);
+  line-height: 1.5;
 }
 
 .header-links {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
-  letter-spacing: 0.01em;
+  line-height: 1.9;
 }
 
 .header-links span,
 .project-links span {
-  margin: 0 8px;
-  color: #a0a097;
+  margin: 0 5px;
+  color: var(--line);
+}
+
+.header-links a {
+  color: var(--link);
 }
 
 .header-links a:hover,
 .top-nav a:hover,
 .project-links a:hover,
 .contact-line a:hover {
-  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .header-photo-wrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 4px;
 }
 
 .header-photo {
-  width: 180px;
-  height: 180px;
+  width: 148px;
+  height: 148px;
   object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
-  border: 1px solid var(--line-soft);
+  object-position: center top;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  filter: grayscale(8%);
 }
+
+/* ── Nav ── */
 
 .top-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line-soft);
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
 }
 
 .top-nav a {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--subtle);
 }
+
+.top-nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ── Sections ── */
 
 .main {
   display: block;
 }
 
 .section {
-  margin-bottom: 36px;
+  margin-bottom: 44px;
 }
 
 .section-heading {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .section-heading h2 {
   margin: 0;
-  font-size: 25px;
-  line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
 }
+
+/* ── Cards → replaced with clean ruled entries ── */
 
 .section-card,
 .entry-card {
-  background: var(--panel);
-  border: 1px solid var(--line-soft);
-  border-radius: var(--radius);
-}
-
-.section-card {
-  padding: 20px 22px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .section-card p:last-child,
@@ -165,33 +199,45 @@ img {
 
 .section-card p,
 .entry-card p {
-  margin: 0 0 12px;
-  font-size: 19px;
+  margin: 0 0 10px;
+  font-size: 15.5px;
+  line-height: 1.7;
 }
+
+/* ── Experience stack ── */
 
 .stack {
   display: grid;
-  gap: 12px;
+  gap: 0;
 }
 
 .entry-card {
-  padding: 16px 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.entry-card:first-child {
+  border-top: none;
+}
+
+.entry-card:last-child {
+  border-bottom: none;
 }
 
 .entry-top {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 4px;
+  gap: 16px;
+  margin-bottom: 2px;
 }
 
 .entry-top h3 {
   margin: 0;
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15.5px;
+  line-height: 1.35;
+  font-weight: 400;
 }
 
 .entry-top h3 span {
@@ -201,52 +247,107 @@ img {
 .meta {
   flex-shrink: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--subtle);
+  white-space: nowrap;
 }
 
 .submeta {
-  font-size: 16px;
-  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: var(--subtle);
+  line-height: 1.4;
 }
 
-.project-kicker {
-  margin-bottom: 8px;
+/* ── Research interests ── */
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.research-tags li {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.9;
+  padding-right: 18px;
+}
+
+.research-tags li::after {
+  content: "·";
+  margin-left: 18px;
+  color: var(--line);
+}
+
+.research-tags li:last-child::after {
+  content: "";
+}
+
+/* ── Project / research card ── */
+
+.project-kicker {
+  margin: 0 0 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--subtle);
+}
+
+.research-card {
+  padding: 0;
 }
 
 .research-card h3 {
-  margin: 0 0 10px;
-  font-size: 28px;
-  line-height: 1.18;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
 .project-links {
+  margin-top: 6px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: var(--muted);
 }
 
-.contact-line {
-  font-size: 20px;
+.project-links a {
+  color: var(--link);
 }
 
-@media (max-width: 760px) {
+/* ── Contact ── */
+
+.contact-line {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-line a {
+  color: var(--link);
+}
+
+/* ── Mobile ── */
+
+@media (max-width: 640px) {
   .page {
-    padding: 28px 16px 44px;
+    padding: 36px 18px 56px;
   }
 
   .header-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
   .header-photo-wrap {
@@ -254,38 +355,25 @@ img {
   }
 
   .header-photo {
-    width: 140px;
-    height: 140px;
+    width: 110px;
+    height: 110px;
   }
 
   .site-header h1 {
-    font-size: 36px;
-  }
-
-  .subhead {
-    font-size: 16px;
-  }
-
-  .section-card p,
-  .entry-card p {
-    font-size: 17px;
+    font-size: 26px;
   }
 
   .entry-top {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 2px;
   }
 
-  .entry-top h3 {
-    font-size: 21px;
+  .meta {
+    font-size: 11px;
   }
 
   .research-card h3 {
-    font-size: 24px;
-  }
-
-  .section-heading h2 {
-    font-size: 22px;
+    font-size: 15.5px;
   }
 }
